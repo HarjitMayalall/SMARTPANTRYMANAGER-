@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/recipeDetailRoot"
+    android:id="@+id/settingsRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
@@ -13,9 +13,9 @@
         android:padding="24dp">
 
         <TextView
-            android:id="@+id/recipeTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Settings"
             android:textSize="28sp"
             android:textStyle="bold"
             android:textColor="#234B35" />
@@ -24,53 +24,61 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Ingredients"
-            android:textSize="21sp"
+            android:labelFor="@id/defaultUnit"
+            android:text="Default ingredient unit"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="#234B35" />
 
-        <TextView
-            android:id="@+id/recipeIngredients"
+        <Spinner
+            android:id="@+id/defaultUnit"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:textSize="18sp"
-            android:lineSpacingExtra="6dp"
-            android:textColor="#333333" />
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Method"
-            android:textSize="21sp"
-            android:textStyle="bold"
-            android:textColor="#234B35" />
+            android:layout_marginTop="8dp"
+            android:text="Choose the unit selected when adding a new ingredient. You can still change it in the ingredient form."
+            android:textSize="16sp"
+            android:textColor="#454545" />
 
-        <TextView
-            android:id="@+id/recipeMethod"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:textSize="18sp"
-            android:lineSpacingExtra="8dp"
-            android:textColor="#333333" />
-
-        <TextView
+        <Button
+            android:id="@+id/saveSettings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Tap water for boiling is assumed available. Ingredient quantities are for one batch; rice and pasta quantities are measured dry."
-            android:textSize="14sp"
-            android:textColor="#555555" />
+            android:minHeight="48dp"
+            android:text="Save Settings"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#286440" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="About Smart Pantry Manager"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#234B35" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Manage your pantry and find recipes you can prepare.\n\nRecipes appear only when every ingredient is available in sufficient quantity. Compatible units such as g and kg are converted automatically.\n\nYour pantry is saved on this device and works offline."
+            android:textSize="16sp"
+            android:lineSpacingExtra="5dp"
+            android:textColor="#454545" />
 
         <Button
-            android:id="@+id/backToRecipes"
+            android:id="@+id/settingsBack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:minHeight="48dp"
-            android:text="Back to Recipes"
+            android:text="Back to Pantry"
             android:textColor="#FFFFFF"
             android:backgroundTint="#286440" />
 

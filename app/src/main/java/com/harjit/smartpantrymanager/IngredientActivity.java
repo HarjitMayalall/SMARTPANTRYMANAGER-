@@ -81,7 +81,18 @@ public class IngredientActivity extends AppCompatActivity {
 
         // The pantry screen passes the selected record's ID through an Intent.
         itemId = getIntent().getLongExtra("item_id", -1);
+        if (itemId == -1 && savedInstanceState == null) {
+            String preferredUnit = getSharedPreferences(
+                    "pantry_settings", MODE_PRIVATE)
+                    .getString("default_unit", "g");
 
+            for (int i = 0; i < units.length; i++) {
+                if (units[i].equals(preferredUnit)) {
+                    inputUnit.setSelection(i);
+                    break;
+                }
+            }
+        }
         if (itemId != -1) {
             PantryItem item = database.getItem(itemId);
 

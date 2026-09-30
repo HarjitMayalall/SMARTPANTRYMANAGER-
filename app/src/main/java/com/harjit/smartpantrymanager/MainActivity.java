@@ -52,14 +52,12 @@ public class MainActivity extends AppCompatActivity {
 
         // These buttons will be connected when their screens are added.
         findViewById(R.id.showRecipes).setOnClickListener(view ->
-                Toast.makeText(this,
-                        "Recipe screen coming next",
-                        Toast.LENGTH_SHORT).show());
+                startActivity(new Intent(
+                        MainActivity.this, RecipesActivity.class)));
 
         findViewById(R.id.showSettings).setOnClickListener(view ->
-                Toast.makeText(this,
-                        "Settings screen coming next",
-                        Toast.LENGTH_SHORT).show());
+                startActivity(new Intent(
+                        MainActivity.this, SettingsActivity.class)));
     }
 
     @Override
